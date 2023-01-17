@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Get LearningResources' do
+RSpec.describe 'Get LearningResources', :type => :request do
   it 'returns a hash with the name of the country, a video about the country, and images of it' do
     country = "Egypt"
 

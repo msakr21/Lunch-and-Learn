@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Get Recipes' do 
+RSpec.describe 'Get Recipes' , :type => :request do 
     it 'returns a list of recipes as json' do 
         country = "Egypt"
 

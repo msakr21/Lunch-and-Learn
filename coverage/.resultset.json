@@ -213,18 +213,38 @@
           1,
           1,
           1,
+          1,
           null,
           null,
           null
         ]
       },
-      "/Users/mostafasakr/Desktop/turing/3mod/projects/lunch-and-learn/app/controllers/api/v1/learning_resources_controller.rb": {
+      "/Users/mostafasakr/Desktop/turing/3mod/projects/lunch-and-learn/app/models/user.rb": {
         "lines": [
           1,
           1,
           1,
+          null
+        ]
+      },
+      "/Users/mostafasakr/Desktop/turing/3mod/projects/lunch-and-learn/app/models/application_record.rb": {
+        "lines": [
           1,
           1,
+          null
+        ]
+      },
+      "/Users/mostafasakr/Desktop/turing/3mod/projects/lunch-and-learn/app/controllers/api/v1/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          1,
+          null,
+          1,
+          null,
           null,
           null
         ]
@@ -235,75 +255,16 @@
           null
         ]
       },
-      "/Users/mostafasakr/Desktop/turing/3mod/projects/lunch-and-learn/app/facades/learning_resource_facade.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/mostafasakr/Desktop/turing/3mod/projects/lunch-and-learn/app/services/learning_resources_service.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/mostafasakr/Desktop/turing/3mod/projects/lunch-and-learn/app/poros/learning_resource.rb": {
+      "/Users/mostafasakr/Desktop/turing/3mod/projects/lunch-and-learn/app/serializers/user_serializer.rb": {
         "lines": [
           1,
           1,
           null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          10,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/mostafasakr/Desktop/turing/3mod/projects/lunch-and-learn/app/serializers/learning_resource_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          2,
           1,
           null
         ]
       }
     },
-    "timestamp": 1673952699
+    "timestamp": 1673989197
   }
 }

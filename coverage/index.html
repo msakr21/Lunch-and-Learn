@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-16T21:56:33-07:00">2023-01-16T21:56:33-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-16T22:50:45-07:00">2023-01-16T22:50:45-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.4
+         4.24
        </span>
     </span> hits/line
     )
@@ -73,11 +73,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#062c9188e8c641b17f1e5323a4ec9a2dae7b097d" class="src_link" title="app/controllers/api/v1/recipes_controller.rb">app/controllers/api/v1/recipes_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">8</td>
+            <td class="cell--number">13</td>
             <td class="cell--number">6</td>
             <td class="cell--number">6</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.67</td>
+            <td class="cell--number">2.33</td>
             
           </tr>
         
@@ -99,7 +99,7 @@
             <td class="cell--number">5</td>
             <td class="cell--number">5</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">7.40</td>
+            <td class="cell--number">9.60</td>
             
           </tr>
         
@@ -110,7 +110,7 @@
             <td class="cell--number">7</td>
             <td class="cell--number">7</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">18.14</td>
+            <td class="cell--number">23.29</td>
             
           </tr>
         
@@ -121,7 +121,7 @@
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">8.75</td>
+            <td class="cell--number">11.00</td>
             
           </tr>
         
@@ -143,7 +143,7 @@
             <td class="cell--number">12</td>
             <td class="cell--number">12</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.75</td>
+            <td class="cell--number">2.50</td>
             
           </tr>
         
@@ -345,8 +345,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="3">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="3">
+            <span class="hits">3</span>
             
 
             
@@ -356,19 +356,19 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="4">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="4">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">    country = CountriesService.get_list.sample[:name] if country == &quot;&quot;</code>
+            <code class="ruby">    country = CountriesService.get_list.sample[:name] unless country </code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="5">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="5">
+            <span class="hits">3</span>
             
 
             
@@ -378,18 +378,73 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="6">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="6">
+            
             
 
             
 
-            <code class="ruby">    render json: RecipeSerializer.new(recipe)</code>
+            <code class="ruby">    # if recipe.class != []</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
+          <li class="covered" data-hits="3" data-linenumber="7">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">      render json: RecipeSerializer.new(recipe)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">    # else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">    #   binding.pry</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">    #   render json: {&quot;data&quot;: []}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">    # end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -400,7 +455,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
@@ -517,35 +572,35 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="3">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="3">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">      recipe_data = RecipesService.get_recipe(country)</code>
+            <code class="ruby">    recipe_data = RecipesService.get_recipe(country)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="4">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="4">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">      recipe_data[:hits].map do |one_recipe|</code>
+            <code class="ruby">    recipe_data[:hits].map do |one_recipe|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="31" data-linenumber="5">
-            <span class="hits">31</span>
+          <li class="covered" data-hits="40" data-linenumber="5">
+            <span class="hits">40</span>
             
 
             
 
-            <code class="ruby">        Recipe.new(one_recipe, country)</code>
+            <code class="ruby">      Recipe.new(one_recipe, country)</code>
           </li>
         </div>
       
@@ -556,7 +611,7 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -658,8 +713,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="31" data-linenumber="5">
-            <span class="hits">31</span>
+          <li class="covered" data-hits="40" data-linenumber="5">
+            <span class="hits">40</span>
             
 
             
@@ -669,8 +724,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="31" data-linenumber="6">
-            <span class="hits">31</span>
+          <li class="covered" data-hits="40" data-linenumber="6">
+            <span class="hits">40</span>
             
 
             
@@ -680,8 +735,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="31" data-linenumber="7">
-            <span class="hits">31</span>
+          <li class="covered" data-hits="40" data-linenumber="7">
+            <span class="hits">40</span>
             
 
             
@@ -691,8 +746,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="31" data-linenumber="8">
-            <span class="hits">31</span>
+          <li class="covered" data-hits="40" data-linenumber="8">
+            <span class="hits">40</span>
             
 
             
@@ -788,8 +843,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="32" data-linenumber="4">
-            <span class="hits">32</span>
+          <li class="covered" data-hits="41" data-linenumber="4">
+            <span class="hits">41</span>
             
 
             
@@ -1015,8 +1070,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="3">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="3">
+            <span class="hits">3</span>
             
 
             
@@ -1026,8 +1081,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="4">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="4">
+            <span class="hits">3</span>
             
 
             
@@ -1037,8 +1092,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="5">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="5">
+            <span class="hits">3</span>
             
 
             
@@ -1048,8 +1103,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="6">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="6">
+            <span class="hits">3</span>
             
 
             
@@ -1059,8 +1114,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="7">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="7">
+            <span class="hits">3</span>
             
 
             
@@ -1081,8 +1136,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="9">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="9">
+            <span class="hits">3</span>
             
 
             
@@ -1125,8 +1180,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="13">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="13">
+            <span class="hits">3</span>
             
 
             
@@ -1136,8 +1191,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="14">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="14">
+            <span class="hits">3</span>
             
 
             
@@ -1147,8 +1202,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="15">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="15">
+            <span class="hits">3</span>
             
 
             

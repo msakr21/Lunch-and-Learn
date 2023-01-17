@@ -7,7 +7,6 @@ RSpec.describe 'Get Recipes' do
         get "/api/v1/recipes?country=#{country}"
 
         expect(response).to be_successful
-
         parsed_response = JSON.parse(response.body,symbolize_names: true)
         expect(parsed_response).to be_a(Hash)
         expect(parsed_response).to have_key(:data)
@@ -20,7 +19,7 @@ RSpec.describe 'Get Recipes' do
     end 
 
     it 'generates a random country if none is provided' do
-      get "/api/v1/recipes?country="
+      get "/api/v1/recipes"
 
       expect(response).to be_successful
 
@@ -29,5 +28,13 @@ RSpec.describe 'Get Recipes' do
       expect(parsed_response).to have_key(:data)
       expect(parsed_response[:data].first.keys).to eq([:id, :type, :attributes])
       expect(parsed_response[:data].first[:attributes].keys).to eq([:title, :url, :country, :image])
+    end
+
+    it "generates a hash with a key of data that has a blank array as a value if country is an empty string or there's no match" do
+      get "/api/v1/recipes?country="
+
+      expect(response).to be_successful
+      parsed_response = JSON.parse(response.body,symbolize_names: true)
+      expect(parsed_response).to eq({"data": []})
     end
 end 

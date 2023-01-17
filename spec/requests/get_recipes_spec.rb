@@ -9,7 +9,7 @@ RSpec.describe 'Get Recipes' do
         expect(response).to be_successful
         parsed_response = JSON.parse(response.body,symbolize_names: true)
         expect(parsed_response).to be_a(Hash)
-        expect(parsed_response).to have_key(:data)
+        expect(parsed_response.keys).to eq([:data])
         expect(parsed_response[:data].first.keys).to eq([:id, :type, :attributes])
         expect(parsed_response[:data].first[:attributes].keys).to eq([:title, :url, :country, :image])
         expect(parsed_response[:data].first[:attributes][:title]).to eq("Dukkah (Middle Eastern Nut and Spice Blend) Recipe")
@@ -25,7 +25,7 @@ RSpec.describe 'Get Recipes' do
 
       parsed_response = JSON.parse(response.body,symbolize_names: true)
       expect(parsed_response).to be_a(Hash)
-      expect(parsed_response).to have_key(:data)
+      expect(parsed_response.keys).to eq([:data])
       expect(parsed_response[:data].first.keys).to eq([:id, :type, :attributes])
       expect(parsed_response[:data].first[:attributes].keys).to eq([:title, :url, :country, :image])
     end

@@ -1,6 +1,6 @@
 class CountriesService 
-  def self.get_country
-      response = conn.get("/v3.1/all") 
+  def self.get_list
+      response = conn.get("/v2/all?fields=name") 
       JSON.parse(response.body,symbolize_names: true)
   end 
 

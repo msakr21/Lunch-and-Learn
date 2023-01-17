@@ -195,7 +195,7 @@
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           null,
@@ -215,6 +215,23 @@
           1,
           null,
           null,
+          null
+        ]
+      },
+      "/Users/mostafasakr/Desktop/turing/3mod/projects/lunch-and-learn/app/controllers/api/v1/learning_resources_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/mostafasakr/Desktop/turing/3mod/projects/lunch-and-learn/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
           null
         ]
       },
@@ -275,8 +292,18 @@
           null,
           null
         ]
+      },
+      "/Users/mostafasakr/Desktop/turing/3mod/projects/lunch-and-learn/app/serializers/learning_resource_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          2,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1673951385
+    "timestamp": 1673952699
   }
 }

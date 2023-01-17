@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe 'Post User', :type => :request do 
   it 'creates a new user based on a json payload body and generates an api key for them then renders a json response with the user data' do
     user_info = {"name": "Athena Dao", "email": "athenadao@bestgirlever.com"}
-    
+
     expect(User.all.length).to eq(0)
 
     post '/api/v1/users', :headers => {"Content-Type" => "application/json", Accept: "application/json"}, params: user_info.to_json
-    
+
     expect(response).to be_successful
     parsed_response = JSON.parse(response.body,symbolize_names: true)
 

@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe LearningResourcesService do 
-  describe '.get_videos' do 
+  describe '.get_video' do 
     it 'returns information about a youtube video, from the Mr. History channel, based on a country' do
-      response = LearningResourcesService.get_videos("Egypt")
+      response = LearningResourcesService.get_video("Egypt")
       expect(response).to be_a Hash
       expect(response.keys).to eq([:items])
       expect(response[:items]).to be_a Array

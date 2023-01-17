@@ -1,5 +1,5 @@
 class LearningResourcesService 
-  def self.get_videos(country)
+  def self.get_video(country)
     response = conn_video.get("/v3/search?part=snippet&maxResults=20&q=#{country}&type=video&channelId=UCluQ5yInbeAkkeCndNnUhpw&fields=items(id,snippet(title))&maxResults=1") 
     JSON.parse(response.body,symbolize_names: true)
   end 

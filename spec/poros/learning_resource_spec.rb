@@ -15,17 +15,17 @@ RSpec.describe LearningResource do
                             ]
                     }
 
-    @images_data = [{:url => "https://www.pexels.com/photo/gray-pyramid-on-dessert-under-blue-sky-71241/",
+    @images_data = {:photos => [{:url => "https://www.pexels.com/photo/gray-pyramid-on-dessert-under-blue-sky-71241/",
                      :photographer => "David McEachan",
                      :photographer_url => "https://www.pexels.com/@davidmceachan",
                      :alt => "Gray Pyramid on Dessert Under Blue Sky"
-                    }]
+                    }]}
 
-    @images_data2 = [{:url => "something else",
+    @images_data2 = {:photos =>[{:url => "something else",
                       :photographer => "Who now?",
                       :photographer_url => "This is a lot of work!",
                       :alt => "Mostafa crying his eyeballs out!"
-                    }]
+                    }]}
 
     @country = "Egypt"
   end

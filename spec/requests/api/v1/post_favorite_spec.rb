@@ -34,7 +34,6 @@ RSpec.describe 'Post Favorite', :type => :request do
 
     post '/api/v1/favorites', :headers => {"Content-Type" => "application/json", Accept: "application/json"}, params: favorite_info.to_json
 
-    expect(response).to_not be_successful
     expect(response.status).to eq(404)
     parsed_response = JSON.parse(response.body,symbolize_names: true)
 

@@ -53,7 +53,6 @@ RSpec.describe 'Get Recipes' , :type => :request do
 
       expect(response).to be_successful
       parsed_response = JSON.parse(response.body,symbolize_names: true)
-      binding.pry
       expect(parsed_response).to be_a(Hash)
       expect(parsed_response.keys).to eq([:data])
       expect(parsed_response[:data].first.keys).to eq([:id, :type, :attributes])

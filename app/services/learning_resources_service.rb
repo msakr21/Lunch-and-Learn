@@ -6,7 +6,7 @@ class LearningResourcesService
 
   def self.conn_video
     Faraday.new("https://youtube.googleapis.com/youtube") do |f|
-      f.params['key'] = ENV['GOOGLE_API-KEY']
+      f.params['key'] = ENV['GOOGLE_API_KEY']
     end
   end 
 

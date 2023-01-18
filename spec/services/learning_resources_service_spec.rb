@@ -7,7 +7,7 @@ RSpec.describe LearningResourcesService do
       header = {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'User-Agent'=>'Faraday v2.7.3'}
 
       stub_request(:get, "https://youtube.googleapis.com/v3/search?channelId=UCluQ5yInbeAkkeCndNnUhpw&fields=items(id,snippet(title))&maxResults=1&part=snippet&q=Egypt&type=video")
-      .with(headers: header, query: {"key" => ENV['GOOGLE_API-KEY']})
+      .with(headers: header, query: {"key" => ENV['GOOGLE_API_KEY']})
       .to_return(status: 200, body: json_response, headers: {})
 
       response = LearningResourcesService.get_video("Egypt")

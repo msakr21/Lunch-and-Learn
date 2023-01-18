@@ -1,6 +1,36 @@
 require 'rails_helper'
 
 RSpec.describe 'Get Recipes' , :type => :request do 
+    before :each do
+      
+      json_response = File.read('spec/fixtures/egypt_edamam.json')
+      country_response = File.read('spec/fixtures/countries.json')
+      recipe_response = File.read('spec/fixtures/egypt_edamam.json')
+      header = {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'User-Agent'=>'Faraday v2.7.3'}
+
+      allow_any_instance_of(Array).to receive(:sample).and_return({name: "Egypt"})
+
+      stub_request(:get, "https://api.edamam.com/api/recipes/v2?field=url&q=Egypt&type=public")
+      .with(headers: header, query: {"app_id" => ENV['EDAMAM_ID'], "app_key" => ENV['EDAMAM_KEY']})
+      .to_return(status: 200, body: recipe_response, headers: {})
+
+      stub_request(:get, "https://restcountries.com/v2/all?fields=name")
+      .with(headers: header)
+      .to_return(status: 200, body: country_response, headers: {})
+
+      stub_request(:get, "https://api.edamam.com/api/recipes/v2?field=url&q=Egypt&type=public")
+      .with(headers: header, query: {"app_id" => ENV['EDAMAM_ID'], "app_key" => ENV['EDAMAM_KEY']})
+      .to_return(status: 200, body: json_response, headers: {})
+
+      stub_request(:get, "https://api.edamam.com/api/recipes/v2?field=url&type=public")
+      .with(headers: header, query: {"app_id" => ENV['EDAMAM_ID'], "app_key" => ENV['EDAMAM_KEY']})
+      .to_return(status: 200, body: json_response, headers: {})
+
+      stub_request(:get, "https://api.edamam.com/api/recipes/v2?field=url&q=&type=public")
+      .with(headers: header, query: {"app_id" => ENV['EDAMAM_ID'], "app_key" => ENV['EDAMAM_KEY']})
+      .to_return(status: 200, body: {"data": []}.to_json, headers: {})
+    end
+
     it 'returns a list of recipes as json' do 
         country = "Egypt"
 

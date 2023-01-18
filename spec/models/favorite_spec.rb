@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe Favorite, type: :model do
   describe 'relationships' do
     it { should belong_to :user }
   end

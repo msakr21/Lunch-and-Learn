@@ -16,6 +16,12 @@ class Api::V1::FavoritesController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
+    if user = User.find_by(api_key: params[:api_key])
+      user.favorites.destroy(params[:favorite_id])
+      render json: {"success": "Favorite deleted successfully"}
+    else
+      render json: {error: "The requested resource could not be found but may be available in the future. Subsequent requests by the client are permissible.", code: 404, status: "Not Found"} , status: 404
+    end
   end
 end

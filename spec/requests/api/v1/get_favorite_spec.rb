@@ -4,7 +4,7 @@ RSpec.describe 'Get Favorites', :type => :request do
   it 'returns a hash response that has a list of favorite recipe and information about each recipe' do
     user = User.create(name: "Athena Dao One", email: "athenadao@bestgirlever.com", api_key: "jgn983hy48thw9begh98h4539h4")
     user.favorites << Favorite.new(country: "thailand", recipe_link: "https://www.tastingtable.com/.....", recipe_title: "Crab Fried Rice (Khaao Pad Bpu)")
-    user.favorites << Favorite.new(country: "thailand", recipe_link: "https://www.7amada.com/.....", recipe_title: "Mulukhiyya")
+    user.favorites << Favorite.new(country: "egypt", recipe_link: "https://www.7amada.com/.....", recipe_title: "Mulukhiyya")
 
     get "/api/v1/favorites?api_key=jgn983hy48thw9begh98h4539h4"
 
